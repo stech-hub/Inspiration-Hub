@@ -15,6 +15,18 @@ export enum QuoteCategory {
   WISDOM = 'Wisdom'
 }
 
+export interface Collection {
+  id: string;
+  name: string;
+  quoteIds: string[];
+}
+
+export interface User {
+  username: string;
+  favorites: string[];
+  collections: Collection[];
+}
+
 export interface AiResponse {
   speech: string;
   title: string;
